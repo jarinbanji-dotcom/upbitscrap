@@ -10,8 +10,9 @@ session.headers.update({
 
 response = session.get(
     "https://api-manager.upbit.com/api/v1/announcements",
-    params={"os":"web","page":1,"per_page":20,"category":"all"}
+    params={"os":"web","page":1,"per_page":20,"category":"trade"}
 )
 
 print(response.json())
+
 
