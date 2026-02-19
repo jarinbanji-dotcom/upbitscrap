@@ -9,5 +9,7 @@ params = {
 }
 
 response = requests.get(url, params=params)
+print(response)
 data = response.json()
+
 print(data)
