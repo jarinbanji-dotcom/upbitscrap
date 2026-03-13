@@ -45,7 +45,10 @@ def place_aggressive_spot_buy(symbol):
 
 symbol=["SKRUSDT","SENTUSDT","USDCUSDT","BTCUSDT","ETHUSDT"]
 for i in symbol:
+    time.sleep(0.5)
     place_aggressive_spot_buy(i)
 for i in symbol:
+    time.sleep(0.5)
     place_aggressive_spot_buy(i)
+
 
