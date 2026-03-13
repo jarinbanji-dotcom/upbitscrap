@@ -22,13 +22,16 @@ def place_aggressive_spot_buy(symbol):
     def fetch_instr():
         results['instr'] = session.get_instruments_info(category="spot", symbol=symbol)
 
-    t1 = threading.Thread(target=fetch_ticker)
-    t2 = threading.Thread(target=fetch_instr)
+    #t1 = threading.Thread(target=fetch_ticker)
+    #t2 = threading.Thread(target=fetch_instr)
 
-    t1.start()
-    t2.start()
-    t1.join()
-    t2.join()
+    #t1.start()
+    #t2.start()
+    #t1.join()
+    #t2.join()
+
+    fetch_instr()
+    fetch_ticker()
 
     print(f"Both fetched in: {time.time()-st:.3f}s")  # ~100-150ms instead of ~300-400ms
 
@@ -45,3 +48,4 @@ for i in symbol:
     place_aggressive_spot_buy(i)
 for i in symbol:
     place_aggressive_spot_buy(i)
+
